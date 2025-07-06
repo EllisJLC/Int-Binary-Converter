@@ -1,8 +1,7 @@
-
-function intToBin (integer, size) {
+function intToBin (integer, size, options) {
 
 }
 
-function binToInt (integer, size) {
+function binToInt (array, options) {
     
 }
