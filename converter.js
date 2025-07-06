@@ -21,6 +21,19 @@ function converterToBin (integer, size, options) {
 
 }
 
+function convertToInt (array, options) {
+    
+    if (!options.reversed) {
+        array.reverse()
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        
+    }
+
+}
+
+
 function intToBin (integer, size, options) {
 
 }
