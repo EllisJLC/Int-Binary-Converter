@@ -1,4 +1,4 @@
-function converterToBin (integer, size, options) {
+function convertToBin (integer, size, options) {
 
     let array = []; // Initialize array
 
@@ -21,23 +21,4 @@ function converterToBin (integer, size, options) {
 
 }
 
-function convertToInt (array, options) {
-    
-    if (!options.reversed) {
-        array.reverse()
-    }
-
-    for (let i = 0; i < array.length; i++) {
-        
-    }
-
-}
-
-
-function intToBin (integer, size, options) {
-
-}
-
-function binToInt (array, options) {
-    
-}
+export default convertToBin;
