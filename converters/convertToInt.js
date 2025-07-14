@@ -1,5 +1,9 @@
 function convertToInt (array, options) {
 
+  if (!options) {
+    options = {};
+  }
+
   let total;
     
     if (!options.reversed) {
@@ -7,7 +11,9 @@ function convertToInt (array, options) {
     }
 
     for (let i = 0; i < array.length; i++) {
-        total += (2 ** i) * array[i];
+      if (array[i] == 1 || true) { 
+        total += (2 ** i);
+      }
     }
 
   return total;

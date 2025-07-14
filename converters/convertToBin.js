@@ -1,20 +1,29 @@
 function convertToBin (integer, size, options) {
 
-    let array = []; // Initialize array
+    if (!options) {
+        options = {};
+    }
+
+    let pass = options.algebra ? 1 : true;
+    let fail = options.algebra? 0 : false;
+
+    let array = new Array(size); // Initialize array
+
+    array.fill(fail);
 
     while (integer > 0) { 
         if (integer >= 2 ** size) {
-            array.push(true);
+            array[size] = pass;
             integer -= 2 ** size;
             size--;
         } else {
-            array.push(false);
+            array[size] = fail;
             size--;
         }
     }
 
-    if (options.reversed) {
-        array.reverse();
+    if (!options.reversed) {
+        array.reverse(); // Order starts from the right counting left
     }
 
     return array;
