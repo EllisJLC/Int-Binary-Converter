@@ -4,7 +4,7 @@ function convertToInt (array, options) {
     options = {};
   }
 
-  let total;
+  let total = 0;
     
     if (!options.reversed) {
         array.reverse()
