@@ -1,8 +1,13 @@
 import convertToInt from "./converters/convertToInt.js";
 
-const isBinary = (value) => typeof value == "boolean" || value == (1 || 0)
+const isBinary = (value) => typeof value == "boolean"
 
 function binToInt (array, options) {
+
+  if (!options) {
+    options = {};
+  }
+
   if (array.length > 64) {
     console.error(`Error: Array of length ${array.length} is too large to convert to an integer, please submit a smaller array.`)
     return;
@@ -10,34 +15,26 @@ function binToInt (array, options) {
 
   array.map((item) => {
     switch (item) {
-      case (item < 0):
-        item = 1;
+      case 1:
+        item = true;
         break
-      case (item == 0):
-        item = 0;
+      case 0:
+        item = false;
         break
-      case (item > 0):
-        item = 1;
+      case true:
+        item = true;
         break
-      case (item == true):
-        item = 1;
-        break
-      case (item == false):
-        item = 0;
+      case false:
+        item = false;
         break
       default:
-        console.error(`Error: Found value ${item} which is a ${typeof item}, can only accept integer values`)
+        console.error(`Error: Found value ${item} which is a ${typeof item}, can only accept boolean values 1/0 or true/false`)
         return;
     } 
       
   })
 
-  if (array.every(isBinary)) {
-    return convertToInt(array, options)
-  } else {
-    console.error(`Error: Array items are not all binary (true/false or 1/0), please check your array`);
-    return;
-  }
+  return(convertToInt(array, options))
 }
 
 export default binToInt;
