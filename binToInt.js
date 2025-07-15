@@ -3,6 +3,11 @@ import convertToInt from "./converters/convertToInt.js";
 const isBinary = (value) => typeof value == "boolean"
 
 function binToInt (array, options) {
+
+  if (!options) {
+    options = {};
+  }
+
   if (array.length > 64) {
     console.error(`Error: Array of length ${array.length} is too large to convert to an integer, please submit a smaller array.`)
     return;
@@ -29,12 +34,7 @@ function binToInt (array, options) {
       
   })
 
-  if (array.every(isBinary)) {
-    return convertToInt(array, options)
-  } else {
-    console.error(`Error: Array items are not all binary (true/false or 1/0), please check your array`);
-    return;
-  }
+  return(convertToInt(array, options))
 }
 
 export default binToInt;
