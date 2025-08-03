@@ -1,6 +1,4 @@
-import convertToInt from "./converters/convertToInt.js";
-
-const isBinary = (value) => typeof value == "boolean"
+const convertToInt = require('./converters/convertToInt.js')
 
 function binToInt (array, options) {
 
@@ -37,4 +35,4 @@ function binToInt (array, options) {
   return(convertToInt(array, options))
 }
 
-export default binToInt;
+module.exports = binToInt;

@@ -1,0 +1,21 @@
+{
+  "name": "int-binary-converter",
+  "version": "1.0.0",
+  "description": "## Table of contents 1. [Introduction](#Introduction)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EllisJLC/Int-Binary-Converter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EllisJLC/Int-Binary-Converter/issues"
+  },
+  "homepage": "https://github.com/EllisJLC/Int-Binary-Converter#readme",
+  "type": "commonjs"
+}
