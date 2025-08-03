@@ -1,5 +1,4 @@
-import convertToBin from "./converters/convertToBin.js";
-// import convertToInt from "./converters/convertToInt.js";
+const convertToBin = require('./converters/convertToBin.js')
 
 function intToBin (integer, size, options) {
   if (typeof integer != "number") {
@@ -27,4 +26,4 @@ function intToBin (integer, size, options) {
     
 // }
 
-export default intToBin;
+module.exports = intToBin;

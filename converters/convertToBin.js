@@ -30,4 +30,4 @@ function convertToBin (integer, size, options) {
 
 }
 
-export default convertToBin;
+module.exports = convertToBin;

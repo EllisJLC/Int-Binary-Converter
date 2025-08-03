@@ -20,4 +20,4 @@ function convertToInt (array, options) {
 
 }
 
-export default convertToInt;
+module.exports = convertToInt;
