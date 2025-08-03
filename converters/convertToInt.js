@@ -10,7 +10,7 @@ function convertToInt (array, options) {
         array.reverse()
     }
 
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 1; i < array.length; i++) {
       if (array[i] == 1 || true) { 
         total += (2 ** i);
       }

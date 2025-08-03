@@ -1,5 +1,7 @@
 function convertToBin (integer, size, options) {
 
+    size--;
+    
     if (!options) {
         options = {};
     }
@@ -11,7 +13,7 @@ function convertToBin (integer, size, options) {
 
     array.fill(fail);
 
-    while (integer > 0) { 
+    while (integer > 1) { 
         if (integer >= 2 ** size) {
             array[size] = pass;
             integer -= 2 ** size;
