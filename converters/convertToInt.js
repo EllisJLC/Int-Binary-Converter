@@ -7,7 +7,7 @@ function convertToInt (array, options) {
   array.map((item) => {
     if (typeof item == "boolean") {
       item = true ? 1 : 0;
-    } else if (item > 1) {
+    } else if (item != (0 || "0")) {
       item = true;
     }
   })
